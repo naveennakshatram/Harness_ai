@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_naveennakshatram_Harness_ai_1753258107700
+  name: Build Harness_ai
+  orgIdentifier: default
+  projectIdentifier: HarnessAIHelloWorld
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: naveennakshatram/Harness_ai
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Arm64
+            os: MacOS
+          runtime:
+            spec: {}
+            type: Docker
+        type: CI
