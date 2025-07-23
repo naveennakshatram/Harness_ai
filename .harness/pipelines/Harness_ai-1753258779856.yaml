@@ -33,3 +33,30 @@ pipeline:
             spec: {}
             type: Cloud
         type: CI
+    - stage:
+        name: HelloStage
+        identifier: HelloStage
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+          buildIntelligence:
+            enabled: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: HWorld
+                  identifier: HWorld
+                  spec:
+                    shell: Sh
+                    command: echo "Hello world this is my first step and stage....!"
