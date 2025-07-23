@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_naveennakshatram_Harness_ai_1753258107700-pr-trigger-input-set
+  identifier: Build_naveennakshatram_Harness_ai_1753258107700prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: HarnessAIHelloWorld
+  pipeline:
+    identifier: Build_naveennakshatram_Harness_ai_1753258107700
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
