@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_naveennakshatram_Harness_ai_1753258783040-push-trigger-input-set
+  identifier: Build_naveennakshatram_Harness_ai_1753258783040pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: HelloWorld
+  pipeline:
+    identifier: Build_naveennakshatram_Harness_ai_1753258783040
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
